@@ -21,6 +21,7 @@ mkShell {
 		# editor deps
 		lapce
 		rust-analyzer
+		nil
 	];
 }
 

@@ -830,15 +830,6 @@ dependencies = [
 ]
 
 [[package]]
-name = "neon-gtk"
-version = "0.1.0"
-dependencies = [
- "gtk4",
- "libadwaita",
- "webrender",
-]
-
-[[package]]
 name = "num-traits"
 version = "0.2.16"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -1404,6 +1395,15 @@ checksum = "db83ceee1d8ac1591e1b053eba4580f58009155b5d8acfd66c1cfd369e593c89"
 dependencies = [
  "app_units",
  "euclid",
+]
+
+[[package]]
+name = "xenon-browser"
+version = "0.1.0"
+dependencies = [
+ "gtk4",
+ "libadwaita",
+ "webrender",
 ]
 
 [[package]]
