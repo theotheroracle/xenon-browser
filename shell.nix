@@ -1,4 +1,5 @@
-with import <nixpkgs> {};
+{ pkgs ? import <nixpkgs> {} }:
+with pkgs;
 mkShell {
 	buildInputs = [
 		# rust deps
@@ -20,6 +21,7 @@ mkShell {
 
 		# editor deps
 		lapce
+		vscodium
 		rust-analyzer
 		nil
 	];

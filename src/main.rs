@@ -1,10 +1,11 @@
-use libadwaita::prelude::*;
-use libadwaita::{ActionRow, Application, ApplicationWindow, HeaderBar};
-use gtk4::{Box, ListBox, Orientation, SelectionMode};
+use adw::prelude::*;
+
+use adw::{ToolbarView, ActionRow, Application, ApplicationWindow, HeaderBar};
+use gtk::{Box, ListBox, Orientation, SelectionMode};
 
 fn main() {
     let application = Application::builder()
-        .application_id("os.saturn.halogen")
+        .application_id("com.example.FirstAdwaitaApp")
         .build();
 
     application.connect_activate(|app| {
@@ -29,14 +30,14 @@ fn main() {
         list.append(&row);
 
         // Combine the content in a box
-        let content = Box::new(Orientation::Vertical, 0);
+        let content = ToolbarView ::new();
         // Adwaitas' ApplicationWindow does not include a HeaderBar
-        content.append(&HeaderBar::new());
-        content.append(&list);
+        content.add_top_bar(&HeaderBar::new());
+        content.set_content(Some(&list));
 
         let window = ApplicationWindow::builder()
             .application(app)
-            .title("First App")
+            .title("xenon")
             .default_width(350)
             // add content to window
             .content(&content)
@@ -46,3 +47,4 @@ fn main() {
 
     application.run();
 }
+

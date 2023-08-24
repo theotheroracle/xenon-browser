@@ -1,5 +1,15 @@
-{ lib, fetchFromGitHub, rustPlatform, cmake, pkg-config, gtk4, gdk-pixbuf, cairo, libadwaita, pango }:
-
+{# lib
+#, fetchFromGitHub
+#,
+rustPlatform
+, cmake
+, pkg-config
+, gtk4
+, gdk-pixbuf
+, cairo
+, pango
+, libadwaita
+}:
 rustPlatform.buildRustPackage rec {
   pname = "xenon-browser";
   version = "0.1.0";
