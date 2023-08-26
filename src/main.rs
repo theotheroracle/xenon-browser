@@ -1,50 +1,38 @@
 use adw::prelude::*;
 
-use adw::{ToolbarView, ActionRow, Application, ApplicationWindow, HeaderBar};
-use gtk::{Box, ListBox, Orientation, SelectionMode};
+use adw::{ToolbarView, Application, ApplicationWindow, HeaderBar, WindowTitle};
+use gtk::{Box, ListBox, Orientation};
 
 fn main() {
-    let application = Application::builder()
-        .application_id("com.example.FirstAdwaitaApp")
+    let xenon_app = Application::builder()
+        .application_id("os.saturn.xenon")
         .build();
 
-    application.connect_activate(|app| {
-        // ActionRows are only available in Adwaita
-        let row = ActionRow::builder()
-            .activatable(true)
-            .title("Click me")
+    xenon_app.connect_activate(|app| {
+        let xenon_url = WindowTitle::builder()
+            .title("xenon")
+            .subtitle("https://example.com")
+            .focusable(true)
+            .focus_on_click(true)
             .build();
-        row.connect_activated(|_| {
-            eprintln!("Clicked!");
-        });
-
-        let list = ListBox::builder()
-            .margin_top(32)
-            .margin_end(32)
-            .margin_bottom(32)
-            .margin_start(32)
-            .selection_mode(SelectionMode::None)
-            // makes the list look nicer
-            .css_classes(vec![String::from("boxed-list")])
+            
+        let xenon_headerbar = HeaderBar::builder()
+            .decoration_layout("icons:close")
+            .title_widget(&xenon_url)
             .build();
-        list.append(&row);
-
-        // Combine the content in a box
-        let content = ToolbarView ::new();
-        // Adwaitas' ApplicationWindow does not include a HeaderBar
-        content.add_top_bar(&HeaderBar::new());
-        content.set_content(Some(&list));
-
+            
+        let xenon_view = ToolbarView ::builder()
+            .build();
+        xenon_view.add_top_bar(&xenon_headerbar);
+            
         let window = ApplicationWindow::builder()
             .application(app)
             .title("xenon")
             .default_width(350)
             // add content to window
-            .content(&content)
+            .content(&xenon_view)
             .build();
-        window.show();
-    });
-
-    application.run();
+        window.present();
+        });
+    xenon_app.run();
 }
-
