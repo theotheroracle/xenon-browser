@@ -51,77 +51,62 @@
         </child>
         <child>
           <object class="GtkBox">
+            <property name="halign">end</property>
             <child>
-              <object class="GtkBox">
-                <property name="orientation">vertical</property>
-                <property name="spacing">-1</property>
-                <property name="width-request">60</property>
+              <object class="GtkScrolledWindow">
+                <property name="hscrollbar-policy">never</property>
+                <property name="propagate-natural-height">True</property>
                 <child>
-                  <object class="AdwAvatar">
-                    <property name="icon-name">web-browser-symbolic</property>
-                    <property name="size">30</property>
+                  <object class="GtkBox">
+                    <property name="orientation">vertical</property>
                     <child>
-                      <object class="GtkPopover">
-                        <property name="position">left</property>
-                        <child>
-                          <object class="AdwStatusPage">
-                            <property name="description"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec laoreet nulla eu ligula viverra lacinia. Maecenas leo libero, lobortis vitae tortor sit amet, ultrices dictum nulla. Cras malesuada risus metus, in iaculis velit tincidunt eu. Donec at euismod leo. Donec viverra leo eu nisl sollicitudin volutpat. Donec luctus mi metus, id luctus ligula rhoncus quis. Nullam sollicitudin lectus sagittis tellus aliquet, eu finibus turpis vehicula. Proin lorem libero, dictum ac nisi vel, imperdiet fringilla turpis. Etiam finibus lorem non tortor tincidunt, ut bibendum augue ultricies. </property>
-                            <property name="height-request">100</property>
-                            <property name="icon-name">web-browser-symbolic</property>
-                            <property name="title">xenon</property>
-                            <property name="width-request">400</property>
-                          </object>
-                        </child>
+                      <object class="AdwAvatar">
+                        <property name="icon-name">web-browser-symbolic</property>
+                        <property name="size">60</property>
                       </object>
                     </child>
-                  </object>
-                </child>
-                <child>
-                  <object class="AdwAvatar">
-                    <property name="icon-name">web-browser-symbolic</property>
-                    <property name="size">30</property>
-                  </object>
-                </child>
-                <child>
-                  <object class="AdwAvatar">
-                    <property name="icon-name">web-browser-symbolic</property>
-                    <property name="size">30</property>
-                  </object>
-                </child>
-                <child>
-                  <object class="AdwAvatar">
-                    <property name="icon-name">web-browser-symbolic</property>
-                    <property name="size">30</property>
-                  </object>
-                </child>
-                <child>
-                  <object class="AdwAvatar">
-                    <property name="icon-name">web-browser-symbolic</property>
-                    <property name="size">30</property>
-                  </object>
-                </child>
-                <child>
-                  <object class="AdwAvatar">
-                    <property name="icon-name">web-browser-symbolic</property>
-                    <property name="size">30</property>
-                  </object>
-                </child>
-                <child>
-                  <object class="AdwAvatar">
-                    <property name="icon-name">web-browser-symbolic</property>
-                    <property name="size">30</property>
-                  </object>
-                </child>
-                <child>
-                  <object class="AdwAvatar">
-                    <property name="icon-name">web-browser-symbolic</property>
-                    <property name="size">30</property>
-                  </object>
-                </child>
-                <child>
-                  <object class="AdwAvatar">
-                    <property name="icon-name">web-browser-symbolic</property>
-                    <property name="size">30</property>
+                    <child>
+                      <object class="AdwAvatar">
+                        <property name="icon-name">web-browser-symbolic</property>
+                        <property name="size">60</property>
+                      </object>
+                    </child>
+                    <child>
+                      <object class="AdwAvatar">
+                        <property name="icon-name">web-browser-symbolic</property>
+                        <property name="size">60</property>
+                      </object>
+                    </child>
+                    <child>
+                      <object class="AdwAvatar">
+                        <property name="icon-name">web-browser-symbolic</property>
+                        <property name="size">60</property>
+                      </object>
+                    </child>
+                    <child>
+                      <object class="AdwAvatar">
+                        <property name="icon-name">web-browser-symbolic</property>
+                        <property name="size">60</property>
+                      </object>
+                    </child>
+                    <child>
+                      <object class="AdwAvatar">
+                        <property name="icon-name">web-browser-symbolic</property>
+                        <property name="size">60</property>
+                      </object>
+                    </child>
+                    <child>
+                      <object class="AdwAvatar">
+                        <property name="icon-name">web-browser-symbolic</property>
+                        <property name="size">60</property>
+                      </object>
+                    </child>
+                    <child>
+                      <object class="AdwAvatar">
+                        <property name="icon-name">web-browser-symbolic</property>
+                        <property name="size">60</property>
+                      </object>
+                    </child>
                   </object>
                 </child>
               </object>
