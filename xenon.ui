@@ -13,6 +13,7 @@
             <property name="decoration-layout">icon:close</property>
             <property name="title-widget">
               <object class="AdwWindowTitle">
+                <property name="focusable">True</property>
                 <property name="subtitle">https://example.com</property>
                 <property name="title">example</property>
               </object>
